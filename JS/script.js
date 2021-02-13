@@ -52,7 +52,7 @@ function showSequence(){
     sequence.forEach(function (el, index) {
         setTimeout(function () {
             //Stops the game if input is detected while showing sequence
-            if(inputSequence.length > 0){
+            if(inputSequence.length > 0 || showRound.innerText === "GAME OVER"){
                 //Checks best score
                 if(round > bestScore){
                     localStorage.clear();
