@@ -6,13 +6,20 @@ var inputSequence = [];
 var showRound = document.getElementById('round');
 var round = 0;
 //Click audio
-var audio = new Audio('Audio/click.mp3');
+var audio = new Audio('Audio/pop.mp3');
 //Square color
 var oldColor = "#a6b1e1";
 
 var bestScore = localStorage.getItem("score");
 var showScore = document.getElementById('score');
-showScore.innerText = `Best score: ${bestScore}`;
+
+
+
+if( bestScore == null){
+    showScore.innerText = "Best score: 0";
+} else {
+    showScore.innerText = `Best score: ${bestScore}`;
+}
 
 //Lights up a square
 function lightUp(sq){
@@ -44,7 +51,15 @@ function showSequence(){
 
     sequence.forEach(function (el, index) {
         setTimeout(function () {
+            //Stops the game if input is detected while showing sequence
             if(inputSequence.length > 0){
+                //Checks best score
+                if(round > bestScore){
+                    localStorage.clear();
+                    localStorage.setItem("score", round-1);
+                    bestScore = localStorage.getItem("score");
+                    showScore.innerText = `Best score: ${bestScore}`;
+                }
                 sequence = [];
                 inputSequence = [];
                 round = 0;
@@ -64,11 +79,13 @@ function userInput(square){
 
     inputSequence.forEach(function(element, index){
         if (element !== sequence[index]){
+            //Checks best score
             if(round > bestScore){
                 localStorage.clear();
                 localStorage.setItem("score", round-1);
+                bestScore = localStorage.getItem("score");
+                showScore.innerText = `Best score: ${bestScore}`;
             }
-            showScore.innerText = `Best score: ${bestScore}`;
             sequence = [];
             inputSequence = [];
             round = 0;
@@ -80,6 +97,7 @@ function userInput(square){
         }
     })
 }
+
 
 
 

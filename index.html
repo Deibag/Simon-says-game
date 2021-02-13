@@ -14,19 +14,25 @@
     <title>Simon says game</title>
   </head>
   <body>
-    <div class="container">
 
+    <!--Header-->
+    <div class="container-fluid header">
         <div class="row">
-            <div class="col-lg-12 my-2">
+            <div class="col-12 text-center">
                 <h1>Welcome to Simon says game!</h1>
             </div>
         </div>
+    </div>
 
+
+
+    
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <p>Click here to start the game</p>
                 <button id="start" type="button" class="btn">Start</button>
-                <p><span id="round">Round: 0</span> &emsp; <span id="score">Best score: 0</span></p>
+                <p><span id="round">Round: 0</span> &emsp; <span id="score"></span></p>
             </div>
         </div>
 
@@ -57,7 +63,7 @@
         </div>
 
         <!--Third row-->
-        <div class="row mt-5 d-flex justify-content-center">
+        <div class="row my-5 d-flex justify-content-center">
             <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                 <div class="square left-square"  id="7" onclick="userInput(7)"></div>
             </div>
@@ -69,6 +75,15 @@
             </div>
         </div>
 
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>Deividas Bagdonas JP20</p>
+            </div>
+        </div>
     </div>
 
     <script src="JS/script.js"></script>

@@ -1,9 +1,18 @@
 body {
     background-color: #f4eeff;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1, p {
-    font-family: 'Poppins', sans-serif;
+.header {
+    background-color: #424874;
+    color: #f4eeff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+p {
+    color: #424874;
     text-align: center;
 }
 
@@ -33,4 +42,20 @@ h1, p {
 
 .left-square {
     float: right;
+}
+
+.footer {
+    background-color: #424874;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer p {
+    color: #f4eeff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
