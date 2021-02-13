@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Simon says game</title>
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 my-2">
+                <h1>Welcome to Simon says game!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>Click here to start the game</p>
+                <button id="start" type="button" class="btn">Start</button>
+                <p><span id="round">Round: 0</span> &emsp; <span id="score">Best score: 0</span></p>
+            </div>
+        </div>
+
+        <!--First row-->
+        <div class="row mt-1 d-flex justify-content-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square left-square" id="1" onclick="userInput(1)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square" id="2" onclick="userInput(2)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square right-square"  id="3" onclick="userInput(3)"></div>
+            </div>
+        </div>
+
+        <!--Second row-->
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square left-square" id="4" onclick="userInput(4)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square" id="5" onclick="userInput(5)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square right-square" id="6" onclick="userInput(6)"></div>
+            </div>
+        </div>
+
+        <!--Third row-->
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square left-square"  id="7" onclick="userInput(7)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square" id="8" onclick="userInput(8)"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <div class="square right-square" id="9" onclick="userInput(9)"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>
